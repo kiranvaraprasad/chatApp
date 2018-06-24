@@ -1,0 +1,41 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+html,
+body {
+    font-size: 16px;
+}
+
+.chat_card {
+    position: absolute;
+    width: 400px;
+    right: 20px;
+    bottom: 80px;
+    border: 1px solid #ececec;
+    border-radius: 10px;
+	box-shadow: -5px 4px 10px #d0d0d06e, 5px -4px 10px #d0d0d06e;
+	display: none;
+}
+.int_chat {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    max-width: 400px;
+}
+.int_chat > img{
+	max-width: 50px;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    float: right;
+    margin-top: 15px;
+}
+.int_chat .tool_tip {
+    font-size: 14px;
+    width: 80%;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: -5px 4px 10px #d0d0d06e, 5px -4px 10px #d0d0d06e;
+}
