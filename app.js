@@ -4,6 +4,8 @@ var bodyParser = require('body-parser');
 var nodemailer = require('nodemailer');
 var cors = require('cors');
 var path =require('path');
+const port=process.env.PORT || 3000;
+
 app.use(bodyParser.json());
 app.use(cors());
 app.use(express.static(path.join(__dirname,'/public')))
@@ -38,6 +40,6 @@ app.post('/sendMail',function(req,res){
       });
 })
 
-app.listen(3000,function () {
+app.listen(port,function () {
     console.log("listening to port 3000");
 })
