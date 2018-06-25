@@ -13,73 +13,75 @@
 </head>
 
 <body>
-	<form action="" method="GET" class="hidden">
-		<input type="text" name="name" data-conv-question="Hi, I am Santosh. Welcome to F1Studioz <span class='em emj1598'></span>"
-		 data-no-answer="true">
-		<select data-conv-question="We are an Experience Design and Product Strategy firm. We simplify Enterprise UX.">
-			<option value="ok">OK</option>
-		</select>
-		<select name="help" data-conv-question="
+	<div id="chat" class="conv-form-wrapper">
+		<form action="" method="GET" class="hidden">
+			<input type="text" name="name" data-conv-question="Hi, I am Santosh. Welcome to F1Studioz <span class='em emj1598'></span>"
+			 data-no-answer="true">
+			<select data-conv-question="We are an Experience Design and Product Strategy firm. We simplify Enterprise UX.">
+				<option value="ok">OK</option>
+			</select>
+			<select name="help" data-conv-question="
 				<img src='animation.gif' class='img-responsive' />
 				<br/>Are you looking for some help with the Experience of your product?
 				">
-			<option value="yes">Yes</option>
-			<option value="not">Not Really</option>
-		</select>
-		<div data-conv-fork="help">
-			<div data-conv-case="yes">
-				<input type="text" data-conv-question="Sweet!" data-no-answer="true">
-				<select name="what" data-conv-question="What is it?">
-					<option value="existing">Existing Product - UX revamp (Web/Mobile App)</option>
-					<option value="newUX">New Product UX</option>
-					<option value="ui">I have Designs. Convert them to code (UI)</option>
-					<option value="ux">UX Research</option>
-				</select>
-				<div data-conv-fork="what">
-					<div data-conv-case="existing">
-						<input type="text" data-conv-question="Awesome!" data-no-answer="true">
-						<select name="urgent" data-conv-question="Is your project urgent?">
-							<option value="yes">Yes</option>
-							<option value="no">No</option>
-						</select>
-						<div data-conv-fork="urgent">
-							<div data-conv-case="yes">
-								<input type="text" data-conv-question="Okay" data-no-answer="true">
-								<select name="price" data-conv-question="What is the budget that you have in mind (in US Dollars)?">
-									<option value="confirm">Confirm</option>
-									<option value="skip">Skip</option>
-								</select>
-								<div data-conv-fork="price">
-									<div data-conv-case="confirm">
-										<input type="text" data-conv-question="Okay. We can't wait to hear what you're working on?" data-no-answer="true">
-										<input type="text" data-conv-question="What's your first name?">
-										<input type="text" data-conv-question="And, finally your email address" data-pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
-										 id="email" type="email" name="email" required placeholder="What's your e-mail?">
-										<input type="text" data-conv-question="Thanks for your time" data-no-answer="true">
-										<select name="thanks" data-conv-question="You are in safe hands! Just relax and sip a coffee or vodka">
-											<option value="absolutely">Absolutely</option>
-										</select>
-										<input type="text" data-conv-question="You will hear from us soon. Bye for now!!" data-no-answer="true">
-									</div>
-									<div data-conv-case="skip">
-										<input type="text" data-conv-question="" data-no-answer="true">
+				<option value="yes">Yes</option>
+				<option value="not">Not Really</option>
+			</select>
+			<div data-conv-fork="help">
+				<div data-conv-case="yes">
+					<input type="text" data-conv-question="Sweet!" data-no-answer="true">
+					<select name="what" data-conv-question="What is it?">
+						<option value="existing">Existing Product - UX revamp (Web/Mobile App)</option>
+						<option value="newUX">New Product UX</option>
+						<option value="ui">I have Designs. Convert them to code (UI)</option>
+						<option value="ux">UX Research</option>
+					</select>
+					<div data-conv-fork="what">
+						<div data-conv-case="existing">
+							<input type="text" data-conv-question="Awesome!" data-no-answer="true">
+							<select name="urgent" data-conv-question="Is your project urgent?">
+								<option value="yes">Yes</option>
+								<option value="no">No</option>
+							</select>
+							<div data-conv-fork="urgent">
+								<div data-conv-case="yes">
+									<input type="text" data-conv-question="Okay" data-no-answer="true">
+									<select name="price" data-conv-question="What is the budget that you have in mind (in US Dollars)?">
+										<option value="confirm">Confirm</option>
+										<option value="skip">Skip</option>
+									</select>
+									<div data-conv-fork="price">
+										<div data-conv-case="confirm">
+											<input type="text" data-conv-question="Okay. We can't wait to hear what you're working on?" data-no-answer="true">
+											<input type="text" data-conv-question="What's your first name?">
+											<input type="text" data-conv-question="And, finally your email address" data-pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
+											 id="email" type="email" name="email" required placeholder="What's your e-mail?">
+											<input type="text" data-conv-question="Thanks for your time" data-no-answer="true">
+											<select name="thanks" data-conv-question="You are in safe hands! Just relax and sip a coffee or vodka">
+												<option value="absolutely">Absolutely</option>
+											</select>
+											<input type="text" data-conv-question="You will hear from us soon. Bye for now!!" data-no-answer="true">
+										</div>
+										<div data-conv-case="skip">
+											<input type="text" data-conv-question="" data-no-answer="true">
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
+				<div data-conv-case="not">
+					<input type="text" name="name" data-conv-question="Okay" data-no-answer="true">
+					<select name="mail" data-conv-question="Feel free to drop us a mail or leave a Whatsapp Message, if you need our assistance">
+						<option value="email" data-callback="email">Email Us</option>
+						<option value="whatsapp" data-callback="whatsapp">Whatsapp Us</option>
+					</select>
+					<input type="text" name="name" data-conv-question="Bye">
+				</div>
 			</div>
-			<div data-conv-case="not">
-				<input type="text" name="name" data-conv-question="Okay" data-no-answer="true">
-				<select name="mail" data-conv-question="Feel free to drop us a mail or leave a Whatsapp Message, if you need our assistance">
-					<option value="email" data-callback="email">Email Us</option>
-					<option value="whatsapp" data-callback="whatsapp">Whatsapp Us</option>
-				</select>
-				<input type="text" name="name" data-conv-question="Bye">
-			</div>
-		</div>
-	</form>
+		</form>
+	</div>
 	<script type="text/javascript" src="jquery-1.12.3.min.js"></script>
 	<script type="text/javascript" src="autosize.min.js"></script>
 	<script type="text/javascript" src="jquery.convform.js"></script>
